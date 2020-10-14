@@ -49,7 +49,7 @@ SchemaUUID.prototype.checkRequired = function(value) {
 
 SchemaUUID.prototype.cast = function(value, doc, init) {
   if (value instanceof mongoose.Types.Buffer.Binary) {
-    return getter(value);
+    return value;
   }
 
   if (typeof value === 'string') {
